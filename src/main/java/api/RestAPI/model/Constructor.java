@@ -14,10 +14,10 @@ public class Constructor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
-    private String Name;
-    private String Email;
-    private String Mobile;
-    private int Rating;
-    private int Projects;
+    private String name;
+    private String email;
+    private String mobile;
+    private int rating;
+    private int projects;
 
 }

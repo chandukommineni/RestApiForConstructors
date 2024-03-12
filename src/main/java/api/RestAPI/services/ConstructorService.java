@@ -4,9 +4,9 @@ import api.RestAPI.model.Constructor;
 import api.RestAPI.repositories.constructorRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class ConstructorService {
@@ -21,5 +21,16 @@ public class ConstructorService {
     public List<Constructor> getAllDetails(){
         return repo.findAll();
     }
+
+    public Optional<Constructor> getDetailsbyId(int id){
+        return repo.findById(id);
+    }
+
+    public List<Constructor> getDetailsByName(String Name){
+        return repo.findByname(Name);
+    }
+    
+
+
 
 }
