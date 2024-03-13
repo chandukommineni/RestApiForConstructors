@@ -26,5 +26,9 @@ public class ConstructorController {
         List<Constructor> allDetails = service.getAllDetails();
         return allDetails;
     }
+    @GetMapping("/getData/{name}")
+    public List<Constructor> getDataByName(@PathVariable String name){
+        return service.getDetailsByName(name);
+    }
 
 }
