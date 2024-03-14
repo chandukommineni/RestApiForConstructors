@@ -21,6 +21,11 @@ public class ConstructorController {
 
     }
 
+    @PutMapping("/update/{id}")
+    public Constructor updateData(@RequestBody Constructor obj,@PathVariable("id") Integer id){
+        return service.updateDetails(obj,id);
+    }
+
     @GetMapping("/getData")
     public List<Constructor> getAllData(){
         List<Constructor> allDetails = service.getAllDetails();
@@ -29,6 +34,10 @@ public class ConstructorController {
     @GetMapping("/getData/{name}")
     public List<Constructor> getDataByName(@PathVariable String name){
         return service.getDetailsByName(name);
+    }
+    @GetMapping("/getDatabyRating")
+    public List<Constructor> getDatabyRating(){
+        return service.getAllDetailsByRank();
     }
 
 }
